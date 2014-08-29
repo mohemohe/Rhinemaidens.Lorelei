@@ -179,7 +179,7 @@ namespace Rhinemaidens
 
             try
             {
-                pt.PostTweet(Body);
+                pt.PostTweetTextOnly(Body);
             }
             catch { throw; }
         }
@@ -217,7 +217,7 @@ namespace Rhinemaidens
 
             try
             {
-                gi.GetImage(ImageUrl, Size, out Image);
+                gi.DownloadImage(ImageUrl, Size, out Image);
             }
             catch { throw; }
         }

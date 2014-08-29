@@ -17,7 +17,7 @@ namespace Rhinemaidens.TwitterAPI.REST
         /// <param name="ImageUrl">URL</param>
         /// <param name="Size">取得するサイズ</param>
         /// <param name="Image">出力先Bitmap</param>
-        public void GetImage(string ImageUrl, Rhinemaidens.Lorelei.ImageSize Size, out Bitmap Image)
+        public void DownloadImage(string ImageUrl, Rhinemaidens.Lorelei.ImageSize Size, out Bitmap Image)
         {
             string url;
 

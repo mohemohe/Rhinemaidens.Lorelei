@@ -16,7 +16,7 @@ namespace Rhinemaidens.TwitterAPI.REST
         /// ツイートを投稿します
         /// </summary>
         /// <param name="Body">本文</param>
-        internal void PostTweet(string Body)
+        internal void PostTweetTextOnly(string Body)
         {
             var oah = new OAuthHelper();
 
