@@ -212,6 +212,36 @@ namespace Rhinemaidens
             catch { throw; }
         }
 
+        /// <summary>
+        /// ふぁぼります
+        /// </summary>
+        /// <param name="TweetId">ふぁぼるツイートのID</param>
+        public void AddFavorite(string TweetId)
+        {
+            var f = new Favorite();
+
+            try
+            {
+                f.AddFavorite(TweetId);
+            }
+            catch { throw; }
+        }
+
+        /// <summary>
+        /// あんふぁぼします
+        /// </summary>
+        /// <param name="TweetId">あんふぁぼするツイートのID</param>
+        public void DeleteFavorite(string TweetId)
+        {
+            var f = new Favorite();
+
+            try
+            {
+                f.DeleteFavorite(TweetId);
+            }
+            catch { throw; }
+        }
+
         public void GetUserInfo(long userId)
         {
             //TODO:

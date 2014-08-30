@@ -15,5 +15,8 @@ namespace Rhinemaidens
 
         public static readonly string postTweetUrl = "https://api.twitter.com/1.1/statuses/update.json";
         public static readonly string postTweetWithImageUrl = "https://api.twitter.com/1.1/statuses/update_with_media.json";
+
+        public static readonly string createFavoriteUrl = "https://api.twitter.com/1.1/favorites/create.json";
+        public static readonly string destroyFavoriteUrl = "https://api.twitter.com/1.1/favorites/destroy.json";
     }
 }

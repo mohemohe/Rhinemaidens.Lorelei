@@ -68,6 +68,18 @@ namespace Rhinemaidens
         void PostTweetWithImage(string Body, string ImageFilePath);
 
         /// <summary>
+        /// ふぁぼります
+        /// </summary>
+        /// <param name="TweetId">ふぁぼるツイートのID</param>
+        void AddFavorite(string TweetId);
+
+        /// <summary>
+        /// あんふぁぼします
+        /// </summary>
+        /// <param name="TweetId">あんふぁぼするツイートのID</param>
+        void DeleteFavorite(string TweetId);
+
+        /// <summary>
         /// 画像を取得します
         /// </summary>
         /// <param name="ImageUrl">URL</param>
