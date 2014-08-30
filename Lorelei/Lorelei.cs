@@ -99,32 +99,44 @@ namespace Rhinemaidens
 
         public Lorelei()
         {
+            Initialize();
         }
 
         public Lorelei(string ConsumerKey, string ConsumerSecret)
         {
-            this.consumerKey = ConsumerKey;
-            this.consumerSecret = ConsumerSecret;
+            Initialize(ConsumerKey, ConsumerSecret);
         }
 
         public Lorelei(string ConsumerKey, string ConsumerSecret, string AccessToken, string AccessTokenSecret)
         {
-            this.consumerKey = ConsumerKey;
-            this.consumerSecret = ConsumerSecret;
-            this.accessToken = AccessToken;
-            this.accessTokenSecret = AccessTokenSecret;
+            Initialize(ConsumerKey, ConsumerSecret, AccessToken, AccessTokenSecret);
         }
 
+        /// <summary>
+        /// Loreleiを初期化します
+        /// </summary>
         public void Initialize()
         {
         }
 
+        /// <summary>
+        /// Loreleiを初期化します
+        /// </summary>
+        /// <param name="ConsumerKey">Consumer key (API key)</param>
+        /// <param name="ConsumerSecret">Consumer secret (API secret)</param>
         public void Initialize(string ConsumerKey, string ConsumerSecret)
         {
             this.consumerKey = ConsumerKey;
             this.consumerSecret = ConsumerSecret;
         }
 
+        /// <summary>
+        /// Loreleiを初期化します
+        /// </summary>
+        /// <param name="ConsumerKey">Consumer key (API key)</param>
+        /// <param name="ConsumerSecret">Consumer secret (API secret)</param>
+        /// <param name="AccessToken">Access token</param>
+        /// <param name="AccessTokenSecret">Access token secret</param>
         public void Initialize(string ConsumerKey, string ConsumerSecret, string AccessToken, string AccessTokenSecret)
         {
             this.consumerKey = ConsumerKey;

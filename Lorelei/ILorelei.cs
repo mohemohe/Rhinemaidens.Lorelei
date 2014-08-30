@@ -10,6 +10,27 @@ namespace Rhinemaidens
     interface ILorelei
     {
         /// <summary>
+        /// Loreleiを初期化します
+        /// </summary>
+        void Initialize();
+
+        /// <summary>
+        /// Loreleiを初期化します
+        /// </summary>
+        /// <param name="ConsumerKey">Consumer key (API key)</param>
+        /// <param name="ConsumerSecret">Consumer secret (API secret)</param>
+        void Initialize(string ConsumerKey, string ConsumerSecret);
+
+        /// <summary>
+        /// Loreleiを初期化します
+        /// </summary>
+        /// <param name="ConsumerKey">Consumer key (API key)</param>
+        /// <param name="ConsumerSecret">Consumer secret (API secret)</param>
+        /// <param name="AccessToken">Access token</param>
+        /// <param name="AccessTokenSecret">Access token secret</param>
+        void Initialize(string ConsumerKey, string ConsumerSecret, string AccessToken, string AccessTokenSecret);
+
+        /// <summary>
         /// OAuthに必要なヘッダを生成します
         /// </summary>
         /// <param name="EncodedUrl">エンコード済みURL</param>
@@ -66,6 +87,12 @@ namespace Rhinemaidens
         void DisconnectUserStream();
 
         /// <summary>
+        ///  取得したツイートをキューから取り出します
+        /// </summary>
+        /// <returns>ツイートに関する情報のパック</returns>
+        TweetInfoPack TryDequeueTweetInfoQueue();
+
+        /// <summary>
         /// 画像をリサイズします
         /// </summary>
         /// <param name="SourceImage">リサイズ元の画像</param>
@@ -83,10 +110,7 @@ namespace Rhinemaidens
         /// <param name="SourceOriginImage">リツイートされたアカウントのアイコン</param>
         /// <param name="SourceOriginImageWidth">幅</param>
         /// <param name="SourceOriginImageHeight">高さ</param>
-        /// <param name="OffsetX">リツイートされたアカウントのアイコンの横位置</param>
-        /// <param name="OffsetY">リツイートされたアカウントのアイコンの縦位置</param>
-        /// <param name="GeneratedImage"></param>
+        /// <param name="GeneratedImage">生成した画像</param>
         void GenerateRetweeterImage(int Width, int Height, Bitmap SourceOriginImage, int SourceOriginImageWidth, int SourceOriginImageHeight, Bitmap SourceRetweeterImage, int SourceRetweeterImageWidth, int SourceRetweeterImageHeight, out Bitmap GeneratedImage);
-        
     }
 }
