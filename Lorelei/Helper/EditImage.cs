@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Rhinemaidens.Helper
 {
-    public class Image
+    public class EditImage
     {
         /// <summary>
         /// 画像をリサイズします

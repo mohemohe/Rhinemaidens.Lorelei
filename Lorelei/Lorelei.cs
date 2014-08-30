@@ -1,4 +1,5 @@
-﻿using Rhinemaidens.OAuth;
+﻿using Rhinemaidens.Helper;
+using Rhinemaidens.OAuth;
 using Rhinemaidens.TwitterAPI.REST;
 using Rhinemaidens.TwitterAPI.Streaming;
 using System.Drawing;
@@ -303,7 +304,7 @@ namespace Rhinemaidens
         /// <param name="ResizedImage">リサイズ後の画像</param>
         public void ResizeImage(int Width, int Height, Bitmap SourceImage, out Bitmap ResizedImage)
         {
-            var i = new Rhinemaidens.Helper.Image();
+            var i = new Rhinemaidens.Helper.EditImage();
             i.ResizeImage(Width, Height, SourceImage, out ResizedImage);
         }
 
@@ -319,7 +320,7 @@ namespace Rhinemaidens
         /// <param name="GeneratedImage">生成した画像</param>
         public void GenerateRetweeterImage(int Width, int Height, Bitmap SourceOriginImage, int SourceOriginImageWidth, int SourceOriginImageHeight, Bitmap SourceRetweeterImage, int SourceRetweeterImageWidth, int SourceRetweeterImageHeight, out Bitmap GeneratedImage)
         {
-            var i = new Rhinemaidens.Helper.Image();
+            var i = new Rhinemaidens.Helper.EditImage();
             i.GenerateRetweeterImage(Width, Height, SourceOriginImage, SourceOriginImageWidth, SourceOriginImageHeight, SourceRetweeterImage, SourceRetweeterImageWidth, SourceRetweeterImageHeight, out GeneratedImage);
         }
     }

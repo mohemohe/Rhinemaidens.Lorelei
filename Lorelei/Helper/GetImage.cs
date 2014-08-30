@@ -7,7 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rhinemaidens.TwitterAPI.REST
+namespace Rhinemaidens.Helper
 {
     class GetImage
     {
