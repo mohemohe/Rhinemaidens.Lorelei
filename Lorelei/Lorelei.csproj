@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helper\Image.cs" />
+    <Compile Include="Helper\EditImage.cs" />
     <Compile Include="OAuth\OAuthHelper.cs" />
     <Compile Include="OAuth\OAuthData.cs" />
     <Compile Include="TwitterAPI\APIurl.cs" />
@@ -54,8 +54,9 @@
     <Compile Include="OAuth\OAuthBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TwitterAPI\REST\Favorite.cs" />
-    <Compile Include="TwitterAPI\REST\GetImage.cs" />
+    <Compile Include="Helper\GetImage.cs" />
     <Compile Include="TwitterAPI\REST\PostTweet.cs" />
+    <Compile Include="TwitterAPI\REST\Retweet.cs" />
     <Compile Include="TwitterAPI\Streaming\UserStream.cs" />
   </ItemGroup>
   <ItemGroup />

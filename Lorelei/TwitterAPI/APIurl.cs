@@ -18,5 +18,7 @@ namespace Rhinemaidens
 
         public static readonly string createFavoriteUrl = "https://api.twitter.com/1.1/favorites/create.json";
         public static readonly string destroyFavoriteUrl = "https://api.twitter.com/1.1/favorites/destroy.json";
+
+        public static readonly string postRetweetUrl_reqireReplace = "https://api.twitter.com/1.1/statuses/retweet/REPLACE_HERE.json";
     }
 }

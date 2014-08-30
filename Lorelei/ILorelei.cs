@@ -80,6 +80,12 @@ namespace Rhinemaidens
         void DeleteFavorite(string TweetId);
 
         /// <summary>
+        /// 公式RTします
+        /// </summary>
+        /// <param name="TweetId">公式RTするツイートのID</param>
+        void PostRetweet(string TweetId);
+
+        /// <summary>
         /// 画像を取得します
         /// </summary>
         /// <param name="ImageUrl">URL</param>

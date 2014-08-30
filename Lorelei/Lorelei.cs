@@ -243,7 +243,22 @@ namespace Rhinemaidens
             catch { throw; }
         }
 
-        public void GetUserInfo(long userId)
+        /// <summary>
+        /// 公式RTします
+        /// </summary>
+        /// <param name="TweetId">公式RTするツイートのID</param>
+        public void PostRetweet(string TweetId)
+        {
+            var r = new Retweet();
+
+            try
+            {
+                r.PostRetweet(TweetId);
+            }
+            catch { throw; }
+        }
+
+        public void GetUserInfo(string userId)
         {
             //TODO:
         }
