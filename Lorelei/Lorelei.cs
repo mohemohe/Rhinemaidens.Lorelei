@@ -198,6 +198,21 @@ namespace Rhinemaidens
         }
 
         /// <summary>
+        /// ツイートを返信します
+        /// </summary>
+        /// <param name="Body">本文</param>
+        public void PostTweet(string Body, string In_reply_to_status_id)
+        {
+            var pt = new PostTweet();
+
+            try
+            {
+                pt.PostTweetTextOnly(Body, In_reply_to_status_id);
+            }
+            catch { throw; }
+        }
+
+        /// <summary>
         /// 画像付きツイートを投稿します
         /// </summary>
         /// <param name="Body">本文</param>

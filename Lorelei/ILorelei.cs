@@ -61,6 +61,12 @@ namespace Rhinemaidens
         void PostTweet(string Body);
 
         /// <summary>
+        /// ツイートを返信します
+        /// </summary>
+        /// <param name="Body">本文</param>
+        void PostTweet(string Body, string In_reply_to_status_id);
+
+        /// <summary>
         /// 画像付きツイートを投稿します
         /// </summary>
         /// <param name="Body">本文</param>

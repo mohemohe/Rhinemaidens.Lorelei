@@ -16,7 +16,7 @@ namespace Rhinemaidens.TwitterAPI.REST
         /// ツイートを投稿します
         /// </summary>
         /// <param name="Body">本文</param>
-        internal void PostTweetTextOnly(string Body)
+        internal void PostTweetTextOnly(string Body, string In_reply_to_status_id = null)
         {
             var oah = new OAuthHelper();
 
@@ -28,8 +28,19 @@ namespace Rhinemaidens.TwitterAPI.REST
             try
             {
                 var method = "POST";
-                var headerString = oah.BuildHeaderString(HttpUtility.UrlEncode(APIurl.postTweetUrl), method, "", "status=" + Uri.EscapeDataString(Body));
-                var sendBytes = Encoding.UTF8.GetBytes("status=" + Uri.EscapeDataString(Body));
+
+                string headerString;
+                byte[] sendBytes;
+                if (In_reply_to_status_id != null)
+                {
+                    headerString = oah.BuildHeaderString(HttpUtility.UrlEncode(APIurl.postTweetUrl), method, "in_reply_to_status_id=" + In_reply_to_status_id, "status=" + Uri.EscapeDataString(Body));
+                    sendBytes = Encoding.UTF8.GetBytes("in_reply_to_status_id=" + In_reply_to_status_id + "&" + "status=" + Uri.EscapeDataString(Body));
+                }
+                else
+                {
+                    headerString = oah.BuildHeaderString(HttpUtility.UrlEncode(APIurl.postTweetUrl), method, "", "status=" + Uri.EscapeDataString(Body));
+                    sendBytes = Encoding.UTF8.GetBytes("status=" + Uri.EscapeDataString(Body));
+                }
 
                 var req = (HttpWebRequest)WebRequest.Create(APIurl.postTweetUrl);
                 req.Method = method;
