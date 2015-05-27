@@ -136,5 +136,35 @@ namespace Rhinemaidens
         /// <param name="SourceOriginImageHeight">高さ</param>
         /// <param name="GeneratedImage">生成した画像</param>
         void GenerateRetweeterImage(int Width, int Height, Bitmap SourceOriginImage, int SourceOriginImageWidth, int SourceOriginImageHeight, Bitmap SourceRetweeterImage, int SourceRetweeterImageWidth, int SourceRetweeterImageHeight, out Bitmap GeneratedImage);
+
+        /// <summary>
+        /// 名前を変更します
+        /// </summary>
+        /// <param name="Name">名前</param>
+        void UpdateName(string Name);
+
+        /// <summary>
+        /// 自己紹介を変更します
+        /// </summary>
+        /// <param name="Description">自己紹介</param>
+        void UpdateDescription(string Description);
+
+        /// <summary>
+        /// URLを変更します
+        /// </summary>
+        /// <param name="Url">URL</param>
+        void UpdateUrl(string Url);
+
+        /// <summary>
+        /// 現在地を変更します
+        /// </summary>
+        /// <param name="Location">現在地</param>
+        void UpdateLocation(string Location);
+
+        /// <summary>
+        /// アイコンを変更します
+        /// </summary>
+        /// <param name="ImageFilePath">画像のパス</param>
+        void UpdateImage(string ImageFilePath);
     }
 }

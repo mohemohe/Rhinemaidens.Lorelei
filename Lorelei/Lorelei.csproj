@@ -56,6 +56,7 @@
     <Compile Include="TwitterAPI\REST\Favorite.cs" />
     <Compile Include="Helper\GetImage.cs" />
     <Compile Include="TwitterAPI\REST\PostTweet.cs" />
+    <Compile Include="TwitterAPI\REST\Profile.cs" />
     <Compile Include="TwitterAPI\REST\Retweet.cs" />
     <Compile Include="TwitterAPI\Streaming\UserStream.cs" />
   </ItemGroup>

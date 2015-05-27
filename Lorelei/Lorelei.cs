@@ -353,5 +353,55 @@ namespace Rhinemaidens
             var i = new Rhinemaidens.Helper.EditImage();
             i.GenerateRetweeterImage(Width, Height, SourceOriginImage, SourceOriginImageWidth, SourceOriginImageHeight, SourceRetweeterImage, SourceRetweeterImageWidth, SourceRetweeterImageHeight, out GeneratedImage);
         }
+
+        /// <summary>
+        /// 名前を変更します
+        /// </summary>
+        /// <param name="Name">名前</param>
+        public void UpdateName(string Name)
+        {
+            var p = new Profile();
+            p.UpdateName(Name);
+        }
+
+        /// <summary>
+        /// 自己紹介を変更します
+        /// </summary>
+        /// <param name="Description">自己紹介</param>
+        public void UpdateDescription(string Description)
+        {
+            var p = new Profile();
+            p.UpdateDescription(Description);
+        }
+
+        /// <summary>
+        /// URLを変更します
+        /// </summary>
+        /// <param name="Url">URL</param>
+        public void UpdateUrl(string Url)
+        {
+            var p = new Profile();
+            p.UpdateUrl(Url);
+        }
+
+        /// <summary>
+        /// 現在地を変更します
+        /// </summary>
+        /// <param name="Location">現在地</param>
+        public void UpdateLocation(string Location)
+        {
+            var p = new Profile();
+            p.UpdateLocation(Location);
+        }
+
+        /// <summary>
+        /// アイコンを変更します
+        /// </summary>
+        /// <param name="ImageFilePath">画像のパス</param>
+        public void UpdateImage(string ImageFilePath)
+        {
+            var p = new Profile();
+            p.UpdateImage(ImageFilePath);
+        }
     }
 }
